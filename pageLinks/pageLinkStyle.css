@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    background: rgb(222,136,63);
+    background: linear-gradient(352deg, rgba(222,136,63,1) 51%, rgba(13,80,134,1) 51%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.container {
+    max-width: 700px;
+    padding: 70px;
+    text-align: center; 
+    background-color: rgba(221, 221, 221, 1);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    position: relative; 
+    z-index: 2; /*aqui é onde determino quem esta acima ou abaixo*/
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/imagens/Senac.jpg'); 
+    background-size: contain;
+    background-repeat: no-repeat; 
+    opacity: 0.4; 
+    z-index: 1; 
+    border-radius: 10px; 
+}
+
+h1 {
+    color: #000000; 
+    margin-bottom: 25px;
+    position: relative; 
+    z-index: 3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    position: relative; 
+    z-index: 3;
+}
+
+li {
+    margin: 10px; 
+}
+
+a {
+    text-align: center; 
+    padding: 15px;
+    color: #fff; /* Cor do texto dos links */
+    background-color: #2b79cd;
+    display: block; 
+    border-radius: 5px;
+    text-decoration: none; 
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+a:hover {
+    background-color: #4b89cb; 
+    transform: translateY(-2px); 
+}
+
+.clicked {
+    box-shadow: 0 0 10px rgba(53, 144, 201, 0.8); 
+    transition: box-shadow 0.5s ease; 
+}
+
+@media (max-width: 600px) {
+    .container {
+        max-width: 90%;
+        padding: 20px;
+    }
+}
