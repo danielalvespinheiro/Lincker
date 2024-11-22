@@ -13,25 +13,7 @@ body {
 }
 
 /* Botão acima do carrossel */
-.link-btn {
-    background-color: #007BFF; 
-    color: white; 
-    border: none; 
-    padding: 10px 15px; /* Reduzido de 20px para 15px */
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px; 
-    margin: 20px auto 10px;
-    margin-bottom: 25px;  
-    cursor: pointer; 
-    border-radius: 5px; 
-    display: block;
-    width: fit-content; /* Mantém o tamanho ajustável ao conteúdo */
-}
 
-.link-btn:hover {
-    background-color: #0056b3;
-}
 
 .carrossel {
     position: relative;
@@ -60,6 +42,26 @@ body {
     object-fit: contain; /* mosta a img completa, ajustando o espaço extra */
 }
 
+.link-btn {
+    background-color: #007BFF; 
+    color: white; 
+    border: none; 
+    padding: 10px 15px; /* Reduzido de 20px para 15px */
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px; 
+    margin: 20px auto 10px;
+    margin-bottom: 25px;  
+    cursor: pointer; 
+    border-radius: 5px; 
+    display: block;
+    width: fit-content; /* Mantém o tamanho ajustável ao conteúdo */
+}
+
+.link-btn:hover {
+    background-color: #0056b3;
+}
+
 button {
     position: absolute;
     top: 50%;
@@ -77,4 +79,10 @@ button {
 
 .next {
     right: 20px;
+}
+
+@media (max-width: 600px){
+    .link-btn{
+        width: 250px;
+    }
 }

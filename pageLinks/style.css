@@ -19,7 +19,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     position: relative; 
-    z-index: 2; /*aqui é onde determino quem esta acima ou abaixo*/
+    z-index: 2; /* aqui é onde determino quem está acima ou abaixo */
 }
 
 .container::before {
@@ -29,8 +29,8 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('/imagens/Senac.jpg'); 
-    background-size: contain;
+    background-image: url('imagensLinks/Senac.jpg'); 
+    background-size: cover; /* Ajuste para cobrir toda a área */
     background-repeat: no-repeat; 
     opacity: 0.4; 
     z-index: 1; 
@@ -58,7 +58,7 @@ li {
 a {
     text-align: center; 
     padding: 15px;
-    color: #fff; /* Cor do texto dos links */
+    color: #fff;
     background-color: #2b79cd;
     display: block; 
     border-radius: 5px;
@@ -71,9 +71,42 @@ a:hover {
     transform: translateY(-2px); 
 }
 
-.clicked {
-    box-shadow: 0 0 10px rgba(53, 144, 201, 0.8); 
-    transition: box-shadow 0.5s ease; 
+/* Estilos do dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-button {
+    text-align: center; 
+    padding: 15px;
+    color: #fff;
+    background-color: #2b79cd;
+    border-radius: 5px;
+    border: none; /* Remove a borda padrão do botão */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    width: 100%; /* Para que o botão ocupe toda a largura do dropdown */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.dropdown-content {
+    display: none; /* Inicialmente escondido */
+    position: absolute;
+    min-width: 200px; /* Aumenta a largura mínima do dropdown */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white; /* Cor dos links no dropdown */
+    padding: 15px 20px; /* Aumenta o padding para links no dropdown */
+    text-decoration: none;
+    display: block;
+    margin: 5px 0; /* Adiciona margem entre os links */
+}
+
+.dropdown-content a:hover {
+    background-color: #3a6f99; /* Cor de fundo ao passar o mouse */
 }
 
 @media (max-width: 600px) {
